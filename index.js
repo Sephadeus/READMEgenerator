@@ -3,6 +3,82 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+
+const licenseObj = {
+
+  'None': {
+    badge: '',
+    link: ''
+  },
+
+  'Apache License 2.0': {
+    badge: "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)",
+    link: "https://opensource.org/licenses/Apache-2.0"
+  },
+
+  'GNU General Public License v3.0': {
+    badge: "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)",
+    link: "https://www.gnu.org/licenses/gpl-3.0"
+  }, 
+
+  'MIT License': {
+    badge: "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)",
+    link: "https://opensource.org/licenses/MIT"
+  },
+
+  'BSD 2-Clause "Simplified" License': {
+    badge: "![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)",
+    link: "https://opensource.org/licenses/BSD-2-Clause"
+  },
+
+  'BSD 3-Clause "New" or "Revised" License': {
+    badge: "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]",
+    link: "https://opensource.org/licenses/BSD-3-Clause"
+  },
+
+  'Boost Software License 1.0': {
+    badge: "![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)",
+    link: "https://www.boost.org/LICENSE_1_0.txt"
+  },
+
+  'Creative Commons Zero v1.0 Universal License': {
+    badge: "![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)",
+    link: "http://creativecommons.org/publicdomain/zero/1.0/"
+  },
+
+  'Eclipse Public License 2.0': {
+    badge: "![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)",
+    link: "https://opensource.org/licenses/EPL-1.0"
+  },
+
+  'GNU Affero General Public License v3.0': {
+    badge: "![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)",
+    link: "https://www.gnu.org/licenses/agpl-3.0"
+  },
+
+  'GNU General Public License v2.0': {
+    badge: "![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)",
+    link: "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html"
+  },
+
+  'Mozilla Public License 2.0': {
+    badge: "![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)",
+    link: "https://opensource.org/licenses/MPL-2.0"
+  },
+
+  'The Unilicense': {
+    badge: "![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)",
+    link: "http://unlicense.org/"
+  },
+
+  'The WTFPL': {
+    badge: "![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)",
+    link: "http://www.wtfpl.net/about/"
+  }   
+}
+
+
+
 // TODO: Create an array of questions for user input
 const questions = [
   "What is the title of this project?", 
@@ -17,12 +93,13 @@ const questions = [
   "Give a detailed explanation about how to use this application.",
   "List your collaborators, if any, with links to their GitHub profiles.",
   "If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If no third party assets were used, please input 'No third party assets were used to build this project'.",
-  "If you followed tutorials, please list them and include links to those here.",
-  "Do you have any badges you want to attach to this project?",
-  "What type of license does this project have?", 
+  "If you followed tutorials, please list the name and link to those here.",
+  "Please provide a link from Shields.io of any badges you want to attach to this project. Enter each link clearly separated by commas.",
+  "What type of license do you want this project to have?", 
   "How can developers contribute to this project?", 
   "What is your GitHub username?",
-  "What is the best email address to reach you at for questions about this project?"
+  "Please provide a link to your GitHub profile. (Optional but recommended)",
+  "Please provide the best email address to reach you at for questions about this project."
 ];
 
 // TODO: Create a function to write README file
@@ -34,6 +111,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+ // console.log(Object.keys(licenseObj));
   promptUser();
 
 }
@@ -96,7 +174,7 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "collaborators",
+        name: "credits",
         message: questions[10],
       },
       {
@@ -118,21 +196,23 @@ function promptUser() {
         type: "list",
         name: "license",
         message: questions[14],
-        choices: [
-          'None', 
-          'Apache License 2.0',
-          'GNU General Public License v3.0', 
-          'MIT License', 
-          'BSD 2-Clause "Simplified" License', 
-          'BSD 3-Clause "New" or "Revised" License',
-          'Boost Software License 1.0',
-          'Creative Commons Zero v1.0 Universal',
-          'Eclipse Public License 2.0',
-          'GNU Affero General Public License v3.0',
-          'GNU General Public License v2.0',
-          'GNU Lesser General Public License v2.1',
-          'Mozilla Public License 2.0',
-          'The Unilicense' ]
+        choices: 
+          Object.keys(licenseObj)
+          // 'None', 
+          // 'Apache License 2.0',
+          // 'GNU General Public License v3.0', 
+          // 'MIT License', 
+          // 'BSD 2-Clause "Simplified" License', 
+          // 'BSD 3-Clause "New" or "Revised" License',
+          // 'Boost Software License 1.0',
+          // 'Creative Commons Zero v1.0 Universal',
+          // 'Eclipse Public License 2.0',
+          // 'GNU Affero General Public License v3.0',
+          // 'GNU General Public License v2.0',
+          // 'GNU Lesser General Public License v2.1',
+          // 'Mozilla Public License 2.0',
+          // 'The Unilicense' 
+        
       },
       {
         type: "input",
@@ -146,8 +226,13 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "email",
+        name: "githubLink",
         message: questions[17],
+      },
+      {
+        type: "input",
+        name: "email",
+        message: questions[18],
       }
       ])
     .then((answers) => {
