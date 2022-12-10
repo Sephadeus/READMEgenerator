@@ -154,13 +154,13 @@ function generateMarkdown(answers) {
   \n## Credits
   \nThe completion of this application is accredited to: 
   \n${answers.credits}
-  \nThird party applications used are: ${answers.thirdParty}
-  \nThe tutorials which helped get this project accomplished: ${answers.tutorials} 
+  \nThird party applications used are: ${answers.thirdParty || "none"}
+  \nThe tutorials which helped get this project accomplished: ${answers.tutorials || "none"} 
   \n## License
   \n${renderLicenseSection(answers.license)}  
   \n---
   \n## Badges
-  \n${answers.badges}
+  \n${answers.badges || "none"}
   \n## How to Contribute
   \n${answers.howToContribute}
   \n## Questions
