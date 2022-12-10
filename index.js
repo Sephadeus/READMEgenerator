@@ -111,7 +111,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
- // console.log(Object.keys(licenseObj));
+  console.log(Object.keys(licenseObj));
   promptUser();
 
 }
@@ -197,22 +197,7 @@ function promptUser() {
         name: "license",
         message: questions[14],
         choices: 
-          Object.keys(licenseObj)
-          // 'None', 
-          // 'Apache License 2.0',
-          // 'GNU General Public License v3.0', 
-          // 'MIT License', 
-          // 'BSD 2-Clause "Simplified" License', 
-          // 'BSD 3-Clause "New" or "Revised" License',
-          // 'Boost Software License 1.0',
-          // 'Creative Commons Zero v1.0 Universal',
-          // 'Eclipse Public License 2.0',
-          // 'GNU Affero General Public License v3.0',
-          // 'GNU General Public License v2.0',
-          // 'GNU Lesser General Public License v2.1',
-          // 'Mozilla Public License 2.0',
-          // 'The Unilicense' 
-        
+          Object.keys(licenseObj)        
       },
       {
         type: "input",
@@ -236,6 +221,7 @@ function promptUser() {
       }
       ])
     .then((answers) => {
+      console.log(generateMarkdown(answers));
       const markdownPageContent = generateMarkdown(answers);
 
       fs.writeFile("myREADME.md", markdownPageContent, (err) =>

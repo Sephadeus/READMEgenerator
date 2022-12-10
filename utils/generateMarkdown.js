@@ -118,7 +118,8 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
 
-
+  renderLicenseBadge(answers.license);
+  renderLicenseLink(answers.license);
   renderLicenseSection(answers.license);
 
   return `${licenseBadge}\n
