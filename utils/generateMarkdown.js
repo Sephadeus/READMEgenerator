@@ -109,8 +109,8 @@ function renderLicenseSection(license) {
     return "";
   } else {
     renderLicenseBadge(license);
-    renderLicenseLink(answers.license);
-  const licenseSection = `##License\nThis project adheres to ${license} standards. You can read more about this license and the privileges it does or does not allow at this link here --> ${renderLicenseLink(license)}.`;
+    renderLicenseLink(license);
+  const licenseSection = `\nThis project adheres to ${license} standards. You can read more about this license and the privileges it does or does not allow at this link here --> ${renderLicenseLink(license)}.`;
   return licenseSection;
 }
 }
@@ -118,13 +118,12 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
 
-  renderLicenseBadge(answers.license);
-  renderLicenseLink(answers.license);
-  renderLicenseSection(answers.license);
+  // renderLicenseBadge(answers.license);
+  // renderLicenseLink(answers.license);
+  // renderLicenseSection(answers.license);
 
   return `${renderLicenseBadge(answers.license)}\n
   #${answers.title}\n
-  \n
   \n## Table of Contents
   \n\t\t- [Description](## Description)
   \n\t\t- [Installation](## Installation)
@@ -134,12 +133,8 @@ function generateMarkdown(answers) {
   \n\t\t- [Badges](## Badges)
   \n\t\t- [How to Contribute](## How to Contribute)
   \n\t\t- [License](## License)
-  \n
-  \n
   \n ## Description
-  \n
   \n${answers.description}
-  \n
   \n- What is the purpose of this project?
   \n${answers.purpose}
   \n- What was our motivation?
@@ -152,17 +147,11 @@ function generateMarkdown(answers) {
   \n${answers.special}
   \n- Some challenges we faced were:
   \n${answers.challenges}
-  \n
   \n## Installation
-  \n
   \n${answers.installation}
-  \n
   \n## Usage
-  \n
   \n${answers.usage}
-  \n
   \n## Credits
-  \n
   \nThe completion of this application is accredited to: 
   \n${answers.credits}
   \nThird party applications used are: ${answers.thirdParty}
@@ -170,15 +159,10 @@ function generateMarkdown(answers) {
   \n## License
   \n${renderLicenseSection(answers.license)}  
   \n---
-  \n
   \n## Badges
-  \n 
   \n${answers.badges}
-  \n
   \n## How to Contribute
-  \n
   \n${answers.howToContribute}
-  \n
   \n## Questions
   \nIf you have any questions about this application, please contact ${answers.github} on GitHub at ${answers.githubLink} or by email at ${answers.email}.
   `;
