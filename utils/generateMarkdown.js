@@ -108,9 +108,9 @@ function renderLicenseSection(license) {
   if (license == 'None') {
     return "";
   } else {
-    renderLicenseBadge(answers.license);
+    renderLicenseBadge(license);
     renderLicenseLink(answers.license);
-  const licenseSection = `##License\nThis project adheres to ${license} standards. You can read more about this license and the privileges it does or does not allow at this link here --> ${licenseLink}.`;
+  const licenseSection = `##License\nThis project adheres to ${license} standards. You can read more about this license and the privileges it does or does not allow at this link here --> ${renderLicenseLink(license)}.`;
   return licenseSection;
 }
 }
@@ -122,7 +122,7 @@ function generateMarkdown(answers) {
   renderLicenseLink(answers.license);
   renderLicenseSection(answers.license);
 
-  return `${licenseBadge}\n
+  return `${renderLicenseBadge(answers.license)}\n
   #${answers.title}\n
   \n
   \n## Table of Contents
@@ -168,7 +168,7 @@ function generateMarkdown(answers) {
   \nThird party applications used are: ${answers.thirdParty}
   \nThe tutorials which helped get this project accomplished: ${answers.tutorials} 
   \n## License
-  \n${licenseSection}  
+  \n${renderLicenseSection(answers.license)}  
   \n---
   \n
   \n## Badges
