@@ -91,7 +91,6 @@ const licenseObj = {
 const questions = [
   "What is the title of this project?",
   "Provide a short description explaining the what, why, and how of your project.",
-  "What is the purpose of this project?",
   "What was/were the motivation(s) for building this project?",
   "What is the problem (if any) that this project solves? What does it do for the user?",
   "What did you learn from building this project?",
@@ -107,7 +106,8 @@ const questions = [
   "How can developers contribute to this project?",
   "What is your GitHub username?",
   "Please provide a link to your GitHub profile. (Optional but recommended)",
-  "Please provide the best email address to reach you at for questions about this project."
+  "Please provide the best email address to reach you at for questions about this project.",
+  "What would you like to name this file? (Please include .md at the end)"
 ];
 
 // TODO: Create a function to write README file
@@ -123,7 +123,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  console.log(Object.keys(licenseObj));
+  console.log("Thanks for using the READMEgenerator! Please answer the following questions as descriptively as possible using proper grammar and spelling:");
   promptUser();
 }
 
@@ -142,103 +142,100 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "purpose",
+        name: "motivation",
         message: questions[2]
       },
       {
         type: "input",
-        name: "motivation",
+        name: "problem",
         message: questions[3]
       },
       {
         type: "input",
-        name: "problem",
+        name: "learned",
         message: questions[4]
       },
       {
         type: "input",
-        name: "learned",
+        name: "special",
         message: questions[5]
       },
       {
         type: "input",
-        name: "special",
+        name: "challenges",
         message: questions[6]
       },
       {
         type: "input",
-        name: "challenges",
+        name: "installation",
         message: questions[7]
       },
       {
         type: "input",
-        name: "installation",
+        name: "usage",
         message: questions[8]
       },
       {
         type: "input",
-        name: "usage",
+        name: "credits",
         message: questions[9]
       },
       {
         type: "input",
-        name: "credits",
+        name: "thirdParty",
         message: questions[10]
       },
       {
         type: "input",
-        name: "thirdParty",
+        name: "tutorials",
         message: questions[11]
       },
       {
         type: "input",
-        name: "tutorials",
-        message: questions[12]
-      },
-      {
-        type: "input",
         name: "badges",
-        message: questions[13]
+        message: questions[12]
       },
       {
         type: "list",
         name: "license",
-        message: questions[14],
+        message: questions[13],
         choices: Object.keys(licenseObj)
       },
       {
         type: "input",
         name: "howToContribute",
-        message: questions[15]
+        message: questions[14]
       },
       {
         type: "input",
         name: "github",
-        message: questions[16]
+        message: questions[15]
       },
       {
         type: "input",
         name: "githubLink",
-        message: questions[17]
+        message: questions[16]
       },
       {
         type: "input",
         name: "email",
-        message: questions[18]
+        message: questions[17]
       },
+      {
+        type: "input",
+        name: "fileName",
+        message: questions[18]
+      }
     ])
     .then((answers) => {
 
-      answersArr = [answers];
-      fileNameInput = answersArr.pop();
-
-      console.log(answersArr);
-      console.log(fileNameInput);
+      console.log(answers.fileName);
+     
 
       console.log(generateMarkdown(answers));
       const markdownPageContent = generateMarkdown(answers);
 
-      writeToFile(fileNameInput, markdownPageContent);
+      writeToFile(answers.fileName, markdownPageContent);
     })
     .catch((err) => {
       console.log(err);
