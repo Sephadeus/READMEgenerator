@@ -152,8 +152,8 @@ function generateMarkdown(answers) {
   \n## Credits
   \nThe completion of this application is accredited to: 
   \n${answers.credits}
-  \nThird party applications used are: ${answers.thirdParty || "none"}
-  \nThe tutorials which helped get this project accomplished: ${answers.tutorials || "none"} 
+  \nThird party applications used are: ${answers.thirdParty || "N/A"}
+  \nThe tutorials which helped get this project accomplished: ${answers.tutorials || "N/A"} 
   \n## License
   \n${renderLicenseSection(answers.license)}  
   \n---
