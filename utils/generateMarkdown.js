@@ -135,8 +135,6 @@ function generateMarkdown(answers) {
   \n\t\t- [License](## License)
   \n ## Description
   \n${answers.description}
-  \n- What is the purpose of this project?
-  \n${answers.purpose}
   \n- What was our motivation?
   \n${answers.motivation}
   \n- What problem does it solve?
