@@ -122,17 +122,17 @@ function generateMarkdown(answers) {
   // renderLicenseLink(answers.license);
   // renderLicenseSection(answers.license);
 
-  return `${renderLicenseBadge(answers.license)} ${answers.badges}\n
-  #${answers.title}\n
-  \n## Table of Contents
-  \n\t\t- [Description](#description)
-  \n\t\t- [Installation](#installation)
-  \n\t\t- [Usage](#usage)
-  \n\t\t- [Credits](#credits)
-  \n\t\t- [License](#license)
-  \n\t\t- [Badges](#badges)
-  \n\t\t- [How to Contribute](#how-to-contribute)
-  \n\t\t- [License](#license)
+  return `${renderLicenseBadge(answers.license)} [![badge](${answers.badges})]\n
+  # ${answers.title}\n
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Badges](#badges)
+  - [How to Contribute](#how-to-contribute)
+  - [License](#license)
   \n ## Description
   \n${answers.description}
   \n- What was our motivation?

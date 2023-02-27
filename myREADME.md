@@ -1,25 +1,16 @@
-![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) ![Happy Coding](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) [![badge](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)]
 
-  #README Generator
+  # README Generator
 
-  
-## Table of Contents
-  
-		- [Description](#description)
-  
-		- [Installation](#installation)
-  
-		- [Usage](#usage)
-  
-		- [Credits](#credits)
-  
-		- [License](#license)
-  
-		- [Badges](#badges)
-  
-		- [How to Contribute](#how-to-contribute)
-  
-		- [License](#license)
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Badges](#badges)
+  - [How to Contribute](#how-to-contribute)
+  - [License](#license)
   
  ## Description
   
@@ -51,7 +42,7 @@ FIrst, navigate to the GitHub repository here --> Then, run ```npm install```. N
   
 ## Usage
   
-Once the application is cloned and dependencies are installed, simply run ```npm run start``` from the project directory and answer the questions in the command line. The application will do the rest!
+Once the application is cloned and dependencies are installed, simply run ```npm run start``` from the project directory and answer the questions in the command line. The application will do the rest! Here is a walkthrough video to give you an idea of how the application works:
   
 ## Credits
   
@@ -66,7 +57,7 @@ The tutorials which helped get this project accomplished: N/A
 ## License
   
 
-This project adheres to GNU General Public License v3.0 standards. You can read more about this license and the privileges it does or does not allow at this link here --> https://www.gnu.org/licenses/gpl-3.0.  
+This project adheres to MIT License standards. You can read more about this license and the privileges it does or does not allow at this link here --> https://opensource.org/licenses/MIT.  
   
 ---
   
