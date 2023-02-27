@@ -122,7 +122,7 @@ function generateMarkdown(answers) {
   // renderLicenseLink(answers.license);
   // renderLicenseSection(answers.license);
 
-  return `${renderLicenseBadge(answers.license)} [![badge](${answers.badges})]\n
+  return `${renderLicenseBadge(answers.license)} ![badge](${answers.badges})\n
   # ${answers.title}\n
   ## Table of Contents
   - [Description](#description)

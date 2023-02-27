@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) [![badge](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)]
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![badge](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)
 
   # README Generator
 
@@ -38,11 +38,11 @@ As stated earlier in this README, one big challenge was devising appropriate que
   
 ## Installation
   
-First, navigate to the GitHub repository here --> Then, run ```npm install```. Next, run the application ```npm run start```. You will be presented with a series of questions in the command line where you may type each response into the terminal and press enter to submit each answer.
+First, navigate to the GitHub repository here --> https://github.com/Sephadeus/READMEgenerator/ and clone the repository to a new directory. Then, navigate to that directory in the terminal and run ```npm install```. Next, run the application with ```npm run start```. 
   
 ## Usage
   
-Once the application is cloned and dependencies are installed, simply run ```npm run start``` from the project directory and answer the questions in the command line. The application will do the rest! Here is a walkthrough video to give you an idea of how the application works:
+Once the application is cloned and dependencies are installed, simply run ```npm run start``` from the project directory and answer the questions in the command line. The application will do the rest! You will be presented with a series of questions in the command line where you may type each response into the terminal and press enter to submit each answer. Here is a walkthrough video to give you an idea of how the application works: https://user-images.githubusercontent.com/90430093/221627279-aca925b0-7f35-4fc0-9dfb-dfcfcca4aae9.mp4
   
 ## Credits
   
