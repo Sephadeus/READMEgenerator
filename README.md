@@ -1,71 +1,72 @@
+![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg) ![Happy Coding](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)
 
-
-  #Sample README Generator
+  #README Generator
 
   
 ## Table of Contents
   
-		- [Description](## Description)
+		- [Description](#description)
   
-		- [Installation](## Installation)
+		- [Installation](#installation)
   
-		- [Usage](## Usage)
+		- [Usage](#usage)
   
-		- [Credits](## Credits)
+		- [Credits](#credits)
   
-		- [License](## License)
+		- [License](#license)
   
-		- [Badges](## Badges)
+		- [Badges](#badges)
   
-		- [How to Contribute](## How to Contribute)
+		- [How to Contribute](#how-to-contribute)
   
-		- [License](## License)
+		- [License](#license)
   
  ## Description
   
-This application generates a README.md file using user input from the command line. 
+This application is a command line README generator that takes a user's response to questions and reformatted into a markdown file to be used as a README. It uses NVM, NPM, and Inquirer v8.2.4.
   
 - What was our motivation?
   
-The purpose of this project is to help users save time on the tedious task of writing a markdown for their README files from scratch.
+The main motivation for this project was to save users time on the tedious task of writing a README markdown from scratch.
   
 - What problem does it solve?
   
-Hopefully, the pointed questions will help users write a high quality README file in record time.
+This application was made with the intention of saving programmers time so they have more freedom to work on other cool projects!
   
 - What did we learn?
   
-One thing that was noted during development was the importance of asking relevant questions that will encourage the user to offer as much key detail about their project as possible.
+One major lesson learned from building this project is, when acquiring data from a user through questions to make sure to ask relevant, pointed questions that encourage a direct, detailed answer. After all, a README should be as informative as possible!
   
 - What makes our app different from others?
   
-There are not many, if any, differences from similar applications. 
+This project shares many similarities with other apps of it's kind. However, users will appreciate the simplicity and ease of using this app versus others.
   
 - Some challenges we faced were:
   
-Some of the biggest challenges were finding the right questions to ask and arranging code in an efficient, effective way.
+As stated earlier in this README, one big challenge was devising appropriate questions to ask the user so that their README will be as thorough as possible. Another challenge was getting the markdown to render correctly in the generateMarkdown.js file. There was a hiccup somewhere between the renderLicense functions and the actual generate markdown function. The solution was as simple as double checking the names of variables to make sure everything was congruent.
   
 ## Installation
   
-Navigate to the github repository and clone the repo to your desired fold. Run "npm install" then "npm run start". Answer the questions by typing your response in the command line.
+FIrst, navigate to the GitHub repository here --> Then, run ```npm install```. Next, run the application ```npm run start```. You will be presented with a series of questions in the command line where you may type each response into the terminal and press enter to submit each answer.
   
 ## Usage
   
-Clone the repo, install dependencies, and run the application. It is that simple.
+Once the application is cloned and dependencies are installed, simply run ```npm run start``` from the project directory and answer the questions in the command line. The application will do the rest!
   
 ## Credits
   
 The completion of this application is accredited to: 
   
-Credit to Grace Choi (@gachoi06) and Xander Rapstine (@Xandromus) for the starter code, JP Labadia (@Sephadeus) is credited with writing the inquirer prompts and the functionality in the index.js file.
+Credit to @gachoi06 (Grace Choi) and @Xandromus (Xander Rapstine) for the starter code. @Sephadeus (JP Labadia) provided functionality to the generateMarkdown function, renderLicense and associated functions, and the inquirer prompts in  index.js.
   
-Third party applications used are: Node version manager (NVM), node package manager (NPM), and the inquirer package was used to create this application.
+Third party applications used are: Node.js v16 and Inquirer v8.2.4 were used to create this project.
   
 The tutorials which helped get this project accomplished: N/A 
   
 ## License
   
-  
+
+This project adheres to GNU General Public License v3.0 standards. You can read more about this license and the privileges it does or does not allow at this link here --> https://www.gnu.org/licenses/gpl-3.0.  
   
 ---
   
@@ -75,7 +76,7 @@ https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen
   
 ## How to Contribute
   
-Clone the repository and made any changes you want!
+Clone the repository, reset the remote origin, and make any changes you like!
   
 ## Questions
   
