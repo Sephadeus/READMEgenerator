@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) [![badge](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)]
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![badge](https://img.shields.io/badge/javascript-Happy%20Coding!-brightgreen)
 
   # README Generator
 
