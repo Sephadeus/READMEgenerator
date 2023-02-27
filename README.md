@@ -1,6 +1,6 @@
 
 
-  #Sample README Generator
+  # Sample README Generator
 
   
 ## Table of Contents
@@ -23,7 +23,7 @@
   
  ## Description
   
-This application generates a README.md file using user input from the command line. 
+This application generates a README.md file using user input from the command line. It uses Node.js v16 and Inquirer V8.2.4.
   
 - What was our motivation?
   
@@ -65,7 +65,7 @@ The tutorials which helped get this project accomplished: N/A
   
 ## License
   
-  
+This application does not have any license attached.
   
 ---
   
