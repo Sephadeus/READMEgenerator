@@ -5,21 +5,21 @@
   
 ## Table of Contents
   
-		- [Description](## Description)
+		- [Description](##Description)
   
-		- [Installation](## Installation)
+		- [Installation](##Installation)
   
-		- [Usage](## Usage)
+		- [Usage](##Usage)
   
-		- [Credits](## Credits)
+		- [Credits](##Credits)
   
-		- [License](## License)
+		- [License](##License)
   
-		- [Badges](## Badges)
+		- [Badges](##Badges)
   
-		- [How to Contribute](## How to Contribute)
+		- [How to Contribute](##How to Contribute)
   
-		- [License](## License)
+		- [License](##License)
   
  ## Description
   
